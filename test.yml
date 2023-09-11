@@ -1,0 +1,24 @@
+config:
+  target: "http://localhost:8083"
+  phases:
+    # - duration: 30
+    #   arrivalRate: 5
+    - duration: 30
+      arrivalRate: 100
+scenarios:
+  - flow:
+      # - post:
+      #     url: "/api/login"
+      #     json:
+      #       username: "testuser"
+      #       password: "testpassword"
+      #     capture:
+      #       json: "$.token"
+      #       as: "token"
+      - get:
+          url: "/api/language"
+          capture:
+            json: "$.detail"
+            as: "detail"
+          # headers:
+          #   Authorization: "Bearer {{token}}"
