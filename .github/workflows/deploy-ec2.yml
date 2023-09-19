@@ -1,0 +1,18 @@
+name: std-portal-ec2
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and deploy OpenAi using Pm2 and EC2
+        run: |
+          pwd 
+          ls
+          npm install
+          pm2 start process.json

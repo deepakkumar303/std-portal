@@ -1,6 +1,6 @@
 {
     "apps": [{
-        "name": "zaven-api",
+        "name": "std-api",
         "script": "./bin/www",
         "instances": -1,
         "exec_mode": "cluster",
